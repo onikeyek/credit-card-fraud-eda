@@ -33,6 +33,7 @@ This study is exploratory in nature and focuses on identifying trends and relati
 * category – merchant category
 * trans_date_trans_time – transaction timestamp
 * is_fraud – fraud indicator (0 = non-fraud, 1 = fraud)
+  
 ** ⚠️ Note: Due to dataset size, a representative sample was used for visualization to ensure efficient analysis while preserving overall patterns.**
 
 ## 🔧 Tools & Technologies
@@ -41,7 +42,9 @@ This study is exploratory in nature and focuses on identifying trends and relati
     Jupyter Notebook
     Libraries: pandas, numpy, matplotlib
 
-Analytical Approach (Process Summary)
+
+## Analytical Approach (Process Summary)
+
 The analysis followed a structured exploratory data analysis (EDA) process:
 1. Data preparation: Cleaned and validated transaction data, handled missing values, and engineered time-based features.
 2. Univariate analysis: Examined individual variables such as transaction amounts, categories, and fraud frequency.
@@ -50,32 +53,26 @@ The analysis followed a structured exploratory data analysis (EDA) process:
 This approach ensures insights are data-driven, interpretable, and relevant to business decision-making.
 
 
-Key Insights
+## Key Insights
 
-Fraudulent transactions are rare but tend to involve higher typical amounts than legitimate transactions.
+- Fraudulent transactions are rare but tend to involve higher typical amounts than legitimate transactions.
+- Extremely high transaction values are usually legitimate, indicating that amount alone is not a reliable fraud indicator.
+- Fraud risk varies significantly by transaction category, with higher exposure in certain online and miscellaneous categories.
+- Fraud activity shows time-based patterns, with relatively higher risk during low-activity hours.
+- Despite lower transaction volume in 2020, the fraud rate increased, suggesting heightened risk during periods of economic disruption.
 
-Extremely high transaction values are usually legitimate, indicating that amount alone is not a reliable fraud indicator.
+## 💡Recommendations
 
-Fraud risk varies significantly by transaction category, with higher exposure in certain online and miscellaneous categories.
+- Apply multi-factor fraud scoring combining amount, category, and time-of-day signals.
+- Use category-specific monitoring to reduce false positives.
+- Increase vigilance during late-night and early-morning hours.
+- Adapt fraud monitoring strategies during periods of economic or behavioral change.
 
-Fraud activity shows time-based patterns, with relatively higher risk during low-activity hours.
+## ⚠️ Limitations
 
-Despite lower transaction volume in 2020, the fraud rate increased, suggesting heightened risk during periods of economic disruption.
+- The analysis is exploratory and does not establish causal relationships.
+- No external economic or demographic datasets were used.
+- Results are intended to inform understanding, not to serve as a deployed fraud detection system.
 
-💡 Business Recommendations
-
-Apply multi-factor fraud scoring combining amount, category, and time-of-day signals.
-
-Use category-specific monitoring to reduce false positives.
-
-Increase vigilance during late-night and early-morning hours.
-
-Adapt fraud monitoring strategies during periods of economic or behavioral change.
-
-⚠️ Limitations
-
-The analysis is exploratory and does not establish causal relationships.
-
-No external economic or demographic datasets were used.
-
-Results are intended to inform understanding, not to serve as a deployed fraud detection system.
+# Author: 
+Naimot Yekini 
