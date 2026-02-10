@@ -22,32 +22,24 @@ This study is exploratory in nature and focuses on identifying trends and relati
 - Economic effects are discussed only in the context of observed temporal patterns.
 - External economic or demographic datasets are not incorporated.
 
-📂 Dataset
+## 📂 Dataset
 
-Type: Credit card transaction records
+- Type: Credit card transaction records
+- Time period: 2019–2020
+- Size: ~1.3 million transactions
 
-Time period: 2019–2020
+# Key variables:
+* amt – transaction amount
+* category – merchant category
+* trans_date_trans_time – transaction timestamp
+* is_fraud – fraud indicator (0 = non-fraud, 1 = fraud)
+** ⚠️ Note: Due to dataset size, a representative sample was used for visualization to ensure efficient analysis while preserving overall patterns.**
 
-Size: ~1.3 million transactions
+## 🔧 Tools & Technologies
 
-Key variables:
-
-amt – transaction amount
-
-category – merchant category
-
-trans_date_trans_time – transaction timestamp
-
-is_fraud – fraud indicator (0 = non-fraud, 1 = fraud)
-
-⚠️ Note: Due to dataset size, a representative sample was used for visualization to ensure efficient analysis while preserving overall patterns.
-
-🔧 Tools & Technologies
-
-Python
-
-Jupyter Notebook
-Libraries: pandas, numpy, matplotlib
+    Python
+    Jupyter Notebook
+    Libraries: pandas, numpy, matplotlib
 
 Analytical Approach (Process Summary)
 The analysis followed a structured exploratory data analysis (EDA) process:
